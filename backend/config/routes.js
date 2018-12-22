@@ -7,4 +7,6 @@ module.exports = app => {
     // * alterar
     app.route('/users/:id')
         .put(app.api.user.save)
+        .get(app.api.user.getById)
+
 }
