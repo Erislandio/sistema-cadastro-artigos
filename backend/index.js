@@ -5,6 +5,8 @@ const db = require('./config/db')
 const PORT = 3000
 app.db = db
 
+
+
 consign()
     .then('./config/middlewares.js')
     .then('./api/validation.js')

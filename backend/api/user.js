@@ -22,7 +22,7 @@ module.exports = app => {
             existsOrError(user.email, "E-mail não informado")
             existsOrError(user.password, "Senha não informada")
             existsOrError(user.confirmPassword, "Confirmação de senha inválida")
-            equalsOrError(user.password, user.confirmPassword, "Senhas Nãp conferem")
+            equalsOrError(user.password, user.confirmPassword, "Senhas Não conferem")
 
             // * usuario ja cadastrado 
             const userFromDB = await app.db('users')
