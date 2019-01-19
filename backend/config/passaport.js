@@ -1,7 +1,7 @@
-const { authSecret } = require('../..env')
-const passaport = require('passport')
-const passaportJwt = require('passport-jwt')
-const { Strategy, ExtractJwt } = passaportJwt
+const { authSecret } = require('../.env')
+const passport = require('passport')
+const passportJwt = require('passport-jwt')
+const { Strategy, ExtractJwt } = passportJwt
 
 module.exports = app => {
     const params = {
@@ -17,8 +17,9 @@ module.exports = app => {
             .catch(err => done(err, false))
     })
 
-    passaport.use(strategy)
+    passport.use(strategy)
+
     return {
-        authenticate: () => passaport.authenticate('jwt', { session: false })
+        authenticate: () => passport.authenticate('jwt', { session: false })
     }
 }
