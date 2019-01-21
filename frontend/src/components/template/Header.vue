@@ -20,7 +20,9 @@ export default {
     }
   },
   methods: {
-    toggleMenu() {}
+    toggleMenu() {
+      this.$store.commit("toggleMenu");
+    }
   }
 };
 </script>
@@ -50,14 +52,14 @@ export default {
 
 header.header > a.toggle {
   width: 60px;
-  height: 100px;
+  height: 60px;
   color: #fff;
   justify-self: flex-start;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
