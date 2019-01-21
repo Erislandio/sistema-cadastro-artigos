@@ -48,4 +48,8 @@ module.exports = app => {
     app.route('/categories/:id/articles')
         .all(app.config.passaport.authenticate())
         .get(app.api.article.getByCategory)
+
+    app.route('/stats')
+        .all(app.config.passaport.authenticate())
+        .get(app.api.stat.get)
 }
