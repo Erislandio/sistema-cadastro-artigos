@@ -16,6 +16,7 @@ module.exports = app => {
         .all(app.config.passaport.authenticate())
         .put(admin(app.api.user.save))
         .get(admin(app.api.user.getById))
+        .delete(admin(app.api.user.remove))
 
     // ! get cateogoria
     app.route('/categories')
