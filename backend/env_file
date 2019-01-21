@@ -1,0 +1,10 @@
+module.exports = {
+    authSecret: 'qwefoiqepicqepjcpq19344r1341-3efo3jcqwj-3',
+     db: {
+        host : '',
+        port: 0,
+        database: '',
+        user: '',
+        password: ''
+    }
+}
